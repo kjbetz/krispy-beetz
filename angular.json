@@ -97,6 +97,7 @@
         }
       }
     },
+    "acft-calculator-acft-calculator-shell": "libs/acft-calculator/acft-calculator-shell",
     "acft-calculator-e2e": {
       "root": "apps/acft-calculator-e2e",
       "sourceRoot": "apps/acft-calculator-e2e/src",
