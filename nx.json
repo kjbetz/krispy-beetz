@@ -12,9 +12,15 @@
   },
   "tasksRunnerOptions": {
     "default": {
-      "runner": "@nrwl/workspace/tasks-runners/default",
+      "runner": "@nrwl/nx-cloud",
       "options": {
-        "cacheableOperations": ["build", "lint", "test", "e2e"]
+        "cacheableOperations": [
+          "build",
+          "lint",
+          "test",
+          "e2e"
+        ],
+        "accessToken": "NmFhNjBlYTgtOWQ4OS00N2VmLWJlM2EtMGJkODM1NGM1ZDZmfHJlYWQtd3JpdGU="
       }
     }
   },
@@ -32,7 +38,9 @@
     },
     "acft-calculator-e2e": {
       "tags": [],
-      "implicitDependencies": ["acft-calculator"]
+      "implicitDependencies": [
+        "acft-calculator"
+      ]
     },
     "api": {
       "tags": []
