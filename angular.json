@@ -1,14 +1,14 @@
 {
-  "version": 1,
+  "version": 2,
   "projects": {
     "acft-calculator": {
       "projectType": "application",
       "root": "apps/acft-calculator",
       "sourceRoot": "apps/acft-calculator/src",
       "prefix": "krispy-beetz",
-      "architect": {
+      "targets": {
         "build": {
-          "builder": "@angular-devkit/build-angular:browser",
+          "executor": "@angular-devkit/build-angular:browser",
           "outputs": ["{options.outputPath}"],
           "options": {
             "outputPath": "dist/apps/acft-calculator",
@@ -58,7 +58,7 @@
           "defaultConfiguration": "production"
         },
         "serve": {
-          "builder": "@angular-devkit/build-angular:dev-server",
+          "executor": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
               "browserTarget": "acft-calculator:build:production"
@@ -73,13 +73,13 @@
           }
         },
         "extract-i18n": {
-          "builder": "@angular-devkit/build-angular:extract-i18n",
+          "executor": "@angular-devkit/build-angular:extract-i18n",
           "options": {
             "browserTarget": "acft-calculator:build"
           }
         },
         "lint": {
-          "builder": "@nrwl/linter:eslint",
+          "executor": "@nrwl/linter:eslint",
           "options": {
             "lintFilePatterns": [
               "apps/acft-calculator/src/**/*.ts",
@@ -88,7 +88,7 @@
           }
         },
         "test": {
-          "builder": "@nrwl/jest:jest",
+          "executor": "@nrwl/jest:jest",
           "outputs": ["coverage/apps/acft-calculator"],
           "options": {
             "jestConfig": "apps/acft-calculator/jest.config.js",
@@ -101,9 +101,9 @@
       "root": "apps/acft-calculator-e2e",
       "sourceRoot": "apps/acft-calculator-e2e/src",
       "projectType": "application",
-      "architect": {
+      "targets": {
         "e2e": {
-          "builder": "@nrwl/cypress:cypress",
+          "executor": "@nrwl/cypress:cypress",
           "options": {
             "cypressConfig": "apps/acft-calculator-e2e/cypress.json",
             "devServerTarget": "acft-calculator:serve:development",
@@ -116,7 +116,7 @@
           }
         },
         "lint": {
-          "builder": "@nrwl/linter:eslint",
+          "executor": "@nrwl/linter:eslint",
           "outputs": ["{options.outputFile}"],
           "options": {
             "lintFilePatterns": ["apps/acft-calculator-e2e/**/*.{js,ts}"]
@@ -128,9 +128,9 @@
       "root": "apps/api",
       "sourceRoot": "apps/api/src",
       "projectType": "application",
-      "architect": {
+      "targets": {
         "build": {
-          "builder": "@nrwl/node:build",
+          "executor": "@nrwl/node:build",
           "outputs": ["{options.outputPath}"],
           "options": {
             "outputPath": "dist/apps/api",
@@ -153,20 +153,20 @@
           }
         },
         "serve": {
-          "builder": "@nrwl/node:execute",
+          "executor": "@nrwl/node:execute",
           "options": {
             "buildTarget": "api:build"
           }
         },
         "lint": {
-          "builder": "@nrwl/linter:eslint",
+          "executor": "@nrwl/linter:eslint",
           "outputs": ["{options.outputFile}"],
           "options": {
             "lintFilePatterns": ["apps/api/**/*.ts"]
           }
         },
         "test": {
-          "builder": "@nrwl/jest:jest",
+          "executor": "@nrwl/jest:jest",
           "outputs": ["coverage/apps/api"],
           "options": {
             "jestConfig": "apps/api/jest.config.js",
@@ -179,9 +179,9 @@
       "root": "libs/api-interfaces",
       "sourceRoot": "libs/api-interfaces/src",
       "projectType": "library",
-      "architect": {
+      "targets": {
         "lint": {
-          "builder": "@nrwl/linter:eslint",
+          "executor": "@nrwl/linter:eslint",
           "outputs": ["{options.outputFile}"],
           "options": {
             "lintFilePatterns": ["libs/api-interfaces/**/*.ts"]
@@ -194,7 +194,7 @@
     "defaultCollection": "@nrwl/angular",
     "packageManager": "npm"
   },
-  "schematics": {
+  "generators": {
     "@nrwl/angular": {
       "application": {
         "linter": "eslint"
