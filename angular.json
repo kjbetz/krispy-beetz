@@ -97,10 +97,6 @@
         }
       }
     },
-    "acft-calculator-acft-calculator-calculator": "libs/acft-calculator/acft-calculator-calculator",
-    "acft-calculator-acft-calculator-domain": "libs/acft-calculator/acft-calculator-domain",
-    "acft-calculator-acft-calculator-shell": "libs/acft-calculator/acft-calculator-shell",
-    "acft-calculator-acft-calculator-store": "libs/acft-calculator/acft-calculator-store",
     "acft-calculator-e2e": {
       "root": "apps/acft-calculator-e2e",
       "sourceRoot": "apps/acft-calculator-e2e/src",
@@ -124,57 +120,6 @@
           "outputs": ["{options.outputFile}"],
           "options": {
             "lintFilePatterns": ["apps/acft-calculator-e2e/**/*.{js,ts}"]
-          }
-        }
-      }
-    },
-    "api": {
-      "root": "apps/api",
-      "sourceRoot": "apps/api/src",
-      "projectType": "application",
-      "targets": {
-        "build": {
-          "executor": "@nrwl/node:build",
-          "outputs": ["{options.outputPath}"],
-          "options": {
-            "outputPath": "dist/apps/api",
-            "main": "apps/api/src/main.ts",
-            "tsConfig": "apps/api/tsconfig.app.json",
-            "assets": ["apps/api/src/assets"]
-          },
-          "configurations": {
-            "production": {
-              "optimization": true,
-              "extractLicenses": true,
-              "inspect": false,
-              "fileReplacements": [
-                {
-                  "replace": "apps/api/src/environments/environment.ts",
-                  "with": "apps/api/src/environments/environment.prod.ts"
-                }
-              ]
-            }
-          }
-        },
-        "serve": {
-          "executor": "@nrwl/node:execute",
-          "options": {
-            "buildTarget": "api:build"
-          }
-        },
-        "lint": {
-          "executor": "@nrwl/linter:eslint",
-          "outputs": ["{options.outputFile}"],
-          "options": {
-            "lintFilePatterns": ["apps/api/**/*.ts"]
-          }
-        },
-        "test": {
-          "executor": "@nrwl/jest:jest",
-          "outputs": ["coverage/apps/api"],
-          "options": {
-            "jestConfig": "apps/api/jest.config.js",
-            "passWithNoTests": true
           }
         }
       }

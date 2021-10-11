@@ -35,9 +35,6 @@
       "tags": [],
       "implicitDependencies": ["acft-calculator"]
     },
-    "api": {
-      "tags": []
-    },
     "api-interfaces": {
       "tags": []
     }
