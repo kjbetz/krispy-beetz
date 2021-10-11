@@ -6,15 +6,8 @@ import { RouterModule } from '@angular/router';
   imports: [
     CommonModule,
     RouterModule.forChild([
-      {
-        path: 'acft-calculator-calculator',
-        loadChildren: () =>
-          import(
-            '@krispy-beetz/acft-calculator/acft-calculator-calculator'
-          ).then((module) => module.AcftCalculatorCalculatorModule),
-      },
       /* {path: '', pathMatch: 'full', component: InsertYourComponentHere} */
     ]),
   ],
 })
-export class AcftCalculatorShellModule {}
+export class AcftCalculatorCalculatorModule {}
