@@ -97,6 +97,7 @@
         }
       }
     },
+    "acft-calculator-domain": "libs/acft-calculator/domain",
     "acft-calculator-e2e": {
       "root": "apps/acft-calculator-e2e",
       "sourceRoot": "apps/acft-calculator-e2e/src",
@@ -124,6 +125,8 @@
         }
       }
     },
+    "acft-calculator-shell": "libs/acft-calculator/shell",
+    "acft-calculator-store": "libs/acft-calculator/store",
     "api-interfaces": {
       "root": "libs/api-interfaces",
       "sourceRoot": "libs/api-interfaces/src",

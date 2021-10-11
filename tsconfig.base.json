@@ -15,6 +15,15 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
+      "@krispy-beetz/acft-calculator/domain": [
+        "libs/acft-calculator/domain/src/index.ts"
+      ],
+      "@krispy-beetz/acft-calculator/shell": [
+        "libs/acft-calculator/shell/src/index.ts"
+      ],
+      "@krispy-beetz/acft-calculator/store": [
+        "libs/acft-calculator/store/src/index.ts"
+      ],
       "@krispy-beetz/api-interfaces": ["libs/api-interfaces/src/index.ts"]
     }
   },

@@ -1,0 +1,26 @@
+{
+  "projectType": "library",
+  "root": "libs/acft-calculator/shell",
+  "sourceRoot": "libs/acft-calculator/shell/src",
+  "prefix": "krispy-beetz",
+  "targets": {
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["coverage/libs/acft-calculator/shell"],
+      "options": {
+        "jestConfig": "libs/acft-calculator/shell/jest.config.js",
+        "passWithNoTests": true
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "options": {
+        "lintFilePatterns": [
+          "libs/acft-calculator/shell/src/**/*.ts",
+          "libs/acft-calculator/shell/src/**/*.html"
+        ]
+      }
+    }
+  },
+  "tags": []
+}
