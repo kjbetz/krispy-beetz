@@ -1,0 +1,26 @@
+{
+  "projectType": "library",
+  "root": "libs/acft-calculator/page-calculator",
+  "sourceRoot": "libs/acft-calculator/page-calculator/src",
+  "prefix": "krispy-beetz",
+  "targets": {
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["coverage/libs/acft-calculator/page-calculator"],
+      "options": {
+        "jestConfig": "libs/acft-calculator/page-calculator/jest.config.js",
+        "passWithNoTests": true
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "options": {
+        "lintFilePatterns": [
+          "libs/acft-calculator/page-calculator/src/**/*.ts",
+          "libs/acft-calculator/page-calculator/src/**/*.html"
+        ]
+      }
+    }
+  },
+  "tags": []
+}

@@ -18,6 +18,9 @@
       "@krispy-beetz/acft-calculator/domain": [
         "libs/acft-calculator/domain/src/index.ts"
       ],
+      "@krispy-beetz/acft-calculator/page-calculator": [
+        "libs/acft-calculator/page-calculator/src/index.ts"
+      ],
       "@krispy-beetz/acft-calculator/shell": [
         "libs/acft-calculator/shell/src/index.ts"
       ],

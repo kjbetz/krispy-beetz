@@ -125,6 +125,7 @@
         }
       }
     },
+    "acft-calculator-page-calculator": "libs/acft-calculator/page-calculator",
     "acft-calculator-shell": "libs/acft-calculator/shell",
     "acft-calculator-store": "libs/acft-calculator/store",
     "api-interfaces": {
