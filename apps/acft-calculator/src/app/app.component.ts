@@ -1,13 +1,7 @@
 import { Component } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
-import { Message } from '@krispy-beetz/api-interfaces';
 
 @Component({
-  selector: 'krispy-beetz-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss'],
+  selector: 'kb-acft-calculator-root',
+  template: '<router-outlet></router-outlet>'
 })
-export class AppComponent {
-  hello$ = this.http.get<Message>('/api/hello');
-  constructor(private http: HttpClient) {}
-}
+export class AppComponent {}

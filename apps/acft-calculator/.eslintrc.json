@@ -13,7 +13,7 @@
           "error",
           {
             "type": "attribute",
-            "prefix": "krispyBeetz",
+            "prefix": "kb",
             "style": "camelCase"
           }
         ],
@@ -21,7 +21,7 @@
           "error",
           {
             "type": "element",
-            "prefix": "krispy-beetz",
+            "prefix": "kb",
             "style": "kebab-case"
           }
         ]

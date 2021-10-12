@@ -1,13 +1,17 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { RouterModule } from '@angular/router';
+import { RouterModule, Routes } from '@angular/router';
 
+const routes: Routes = [
+  {
+    path: '',
+    loadChildren: () =>
+      import('./page/page.component').then(
+        (module) => module.PageCalculatorPageComponentModule
+      ),
+  },
+];
 @NgModule({
-  imports: [
-    CommonModule,
-    RouterModule.forChild([
-      /* {path: '', pathMatch: 'full', component: InsertYourComponentHere} */
-    ]),
-  ],
+  imports: [CommonModule, RouterModule.forChild(routes)],
 })
 export class AcftCalculatorPageCalculatorModule {}
